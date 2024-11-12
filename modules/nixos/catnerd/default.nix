@@ -7,6 +7,7 @@
 
     ./font
     ./grub
+    ./gtk
     ./plymouth
     ./tty
   ];

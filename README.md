@@ -42,6 +42,7 @@ The following is a list of supported and planned modules.
 
 - [ ] Console
 - [x] Font
+- [ ] GTK
 - [x] GRUB
 - [ ] KMScon
 - [x] Plymouth
