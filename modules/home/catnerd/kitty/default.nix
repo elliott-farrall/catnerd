@@ -21,7 +21,7 @@ in
 
   config = lib.mkIf enable {
     programs.kitty = {
-      theme = "Catppuccin-${lib.catnerd.mkUpper flavour}";
+      themeFile = "Catppuccin-${lib.catnerd.mkUpper flavour}";
       font = {
         package = pkgs.nerdfonts;
         name = "${config.catnerd.fonts.mono.family} Nerd Font";
