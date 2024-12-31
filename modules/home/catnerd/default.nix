@@ -1,5 +1,5 @@
-{ config
-, osConfig
+{ osConfig ? null
+, config
 , lib
 , ...
 }:
@@ -31,10 +31,10 @@ in
 
   config = lib.mkIf enable {
     assertions = [
-      {
+      (lib.mkIf osConfig != null {
         assertion = osConfig.programs.dconf.enable;
         message = "CatNerd requires dconf to be enabled in OS";
-      }
+      })
     ];
   };
 }
