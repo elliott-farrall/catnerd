@@ -149,6 +149,16 @@ The following is a list of supported and planned modules.
       };
     ```
 
+## To Do
+
+### Fonts
+
+Use [font data](https://github.com/NixOS/nixpkgs/blob/nixos-unstable/pkgs/data/fonts/nerd-fonts/manifests/fonts.json) to auto-populate options.
+
+### Testing
+
+Implement better testing methods that use all possible options combinations.
+
 <!-- this section is optional -->
 <!-- 
 ## 🙋 FAQ
