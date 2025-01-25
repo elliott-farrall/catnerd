@@ -1,6 +1,5 @@
 { config
 , lib
-, pkgs
 , ...
 }:
 
@@ -22,7 +21,10 @@ in
   config = lib.mkIf enable {
     fonts = {
       fontconfig.enable = true;
-      packages = with pkgs; [ nerdfonts ];
+      packages = [
+        config.catnerd.fonts.main.pkg
+        config.catnerd.fonts.mono.pkg
+      ];
     };
   };
 }

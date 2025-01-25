@@ -28,7 +28,7 @@ in
       ];
       theme = "catppuccin-${flavour}";
 
-      font = "${pkgs.nerdfonts}/share/fonts/opentype/NerdFonts/${config.catnerd.fonts.mono.family}NerdFontMono-Regular.otf";
+      font = "${config.catnerd.fonts.mono.pkg}/share/fonts/opentype/NerdFonts/${config.catnerd.fonts.mono.family}/${config.catnerd.fonts.mono.family}NerdFontMono-Regular.otf";
     };
   };
 }

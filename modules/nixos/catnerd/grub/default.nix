@@ -26,7 +26,7 @@ in
       theme = "${pkgs.catnerd.catppuccin-grub.override { inherit flavour accent; }}";
       splashImage = pkgs.catnerd.catppuccin-splash.override { inherit flavour accent; };
 
-      font = "${pkgs.nerdfonts}/share/fonts/opentype/NerdFonts/${config.catnerd.fonts.mono.family}NerdFontMono-Regular.otf";
+      font = "${config.catnerd.fonts.mono.pkg}/share/fonts/opentype/NerdFonts/${config.catnerd.fonts.mono.family}NerdFontMono-Regular.otf";
       fontSize = config.catnerd.fonts.mono.size;
     };
   };

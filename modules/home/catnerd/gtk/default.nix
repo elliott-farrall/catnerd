@@ -43,7 +43,7 @@ in
       };
       font = {
         name = "${config.catnerd.fonts.main.family} Nerd Font";
-        package = pkgs.nerdfonts;
+        package = config.catnerd.fonts.main.pkg;
         size = config.catnerd.fonts.main.size;
       };
     };

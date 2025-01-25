@@ -1,6 +1,5 @@
 { config
 , lib
-, pkgs
 , ...
 }:
 
@@ -23,7 +22,7 @@ in
     programs.kitty = {
       themeFile = "Catppuccin-${lib.catnerd.mkUpper flavour}";
       font = {
-        package = pkgs.nerdfonts;
+        package = config.catnerd.fonts.mono.pkg;
         name = "${config.catnerd.fonts.mono.family} Nerd Font";
         size = config.catnerd.fonts.mono.size;
       };

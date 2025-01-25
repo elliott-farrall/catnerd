@@ -1,4 +1,6 @@
-{ lib
+{ config
+, lib
+, pkgs
 , ...
 }:
 
@@ -29,7 +31,7 @@
     fonts = {
       main = {
         family = lib.mkOption {
-          type = lib.types.enum lib.catnerd.mainFonts;
+          type = lib.types.enum (builtins.attrNames lib.catnerd.mainFonts);
           default = "Ubuntu";
           description = "Main nerdfont family";
         };
@@ -38,10 +40,15 @@
           default = 10;
           description = "Main nerdfont size";
         };
+        pkg = lib.mkOption {
+          type = lib.types.package;
+          default = pkgs.nerd-fonts.${lib.catnerd.mainFonts.${config.catnerd.fonts.main.family}};
+          description = "Main nerdfont package";
+        };
       };
       mono = {
         family = lib.mkOption {
-          type = lib.types.enum lib.catnerd.monoFonts;
+          type = lib.types.enum (builtins.attrNames lib.catnerd.monoFonts);
           default = "DroidSansM";
           description = "Mono nerdfont family";
         };
@@ -49,6 +56,11 @@
           type = lib.types.int;
           default = 12;
           description = "Mono nerdfont size";
+        };
+        pkg = lib.mkOption {
+          type = lib.types.package;
+          default = pkgs.nerd-fonts.${lib.catnerd.monoFonts.${config.catnerd.fonts.mono.family}};
+          description = "Mono nerdfont package";
         };
       };
     };
