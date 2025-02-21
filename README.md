@@ -44,7 +44,7 @@ The following is a list of supported and planned modules.
 - [x] Font
 - [ ] GTK
 - [x] GRUB
-- [ ] KMScon
+- [x] KMScon
 - [x] Plymouth
 - [x] TTY
 - [ ] SDDM
