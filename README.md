@@ -15,6 +15,12 @@
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/preview.webp"/>
 </p>
 
+## :warning: DEPRECEATED :warning:
+
+This project was designed to be an alternative to the likes of [stylix](https://github.com/danth/stylix) and [catppuccin/nix](https://github.com/catppuccin/nix) that would offer some missing features. However, I have since switched to `stylix` and will no longer be working on `catnerd` as I do not believe there is anything that it will provide that `stylix` does not already offer.
+
+The repository will remain archived for future reference.
+
 ## Previews
 
 <details>
